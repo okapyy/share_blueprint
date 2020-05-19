@@ -1,33 +1,51 @@
-# README
+# Share BluePrint
+## 使用技術
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails 5.2.4.2
+devise
+ancestry
 
-Things you may want to cover:
+# 概要
 
-* Ruby version
 
-* System dependencies
+# 本番環境
 
-* Configuration
+# 制作背景
+建築業界では今でもなお設計図面は人が手作業で全てを描いています。技術のいる作業ですが、もしその作業の効率化されれば少しでもブラック企業が減るのではないかと思い制作しました。
 
-* Database creation
+# DEMO
 
-* Database initialization
+# 工夫したポイント
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 課題や今後実装したい機能
 
 # DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-
+|email|string|null: false|
 ### Association
-- 
+- has_many :cads
+
+## cadsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|design|text|null: false|
+|company|string|null: false|
+|product_name|string|null: false|
+|detail|text||
+|user_id|reference|null: false, foreign_key: true|
+|genre_id|reference|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :genre
+
+## genresテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|ancestry|string||
+### Association
+- has_many :cads
+- has_ancestry
