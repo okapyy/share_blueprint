@@ -1,0 +1,2 @@
+module CadsHelper
+end

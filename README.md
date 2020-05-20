@@ -5,30 +5,30 @@ Ruby on Rails 5.2.4.2
 devise
 ancestry
 
-# 概要
+## 概要
 
 
-# 本番環境
+## 本番環境
 
-# 制作背景
+## 制作背景
 建築業界では今でもなお設計図面は人が手作業で全てを描いています。技術のいる作業ですが、もしその作業の効率化されれば少しでもブラック企業が減るのではないかと思い制作しました。
 
-# DEMO
+## DEMO
 
-# 工夫したポイント
+## 工夫したポイント
 
-# 課題や今後実装したい機能
+## 課題や今後実装したい機能
 
-# DB設計
-## usersテーブル
+## DB設計
+### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false|
-### Association
+#### Association
 - has_many :cads
 
-## cadsテーブル
+### cadsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |design|text|null: false|
@@ -37,15 +37,15 @@ ancestry
 |detail|text||
 |user_id|reference|null: false, foreign_key: true|
 |genre_id|reference|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :genre
 
-## genresテーブル
+### genresテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string||
 |ancestry|string||
-### Association
+#### Association
 - has_many :cads
 - has_ancestry
