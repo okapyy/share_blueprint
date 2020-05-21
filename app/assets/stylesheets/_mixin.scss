@@ -1,0 +1,5 @@
+@mixin mouse_hover($opacity) {
+  &:hover {
+    opacity: $opacity;
+  }
+}

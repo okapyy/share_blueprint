@@ -1,1 +1,56 @@
-Hello
+.index
+  .header
+    .title
+      .title__text
+        %p SHARE BLUEPRINT
+    %ul
+      %li
+        = link_to "#" do
+          新規登録
+      %li
+        = link_to "#" do
+          アプリについて
+      %li
+        = link_to "#" do
+          登録メーカー一覧
+      %li
+        = link_to "#" do
+          ジャンル検索
+  .main
+    .box
+      .information
+        .information__title
+          %p NEWS.
+        %ul.information__contents
+          %li 2020.05.20      アプリを公開しました。
+        .information__contents
+          %li 2020.05.20      アプリを公開しました。
+        .information__contents
+          %li 2020.05.20      アプリを公開しました。
+      .new-product
+        .new-product__title
+          %p NEW PRODUCTION.
+          = link_to "#", class: "product-all" do
+            新着製品一覧
+        .new-product__contents
+          %label
+            = link_to "#", class: "content" do
+              = icon('far', 'folder', class: "file-icon")
+              .content__product-name
+                型番：aa-0123-8888
+              .content__company
+                Panasonic
+          %label
+            = link_to "#", class: "content" do
+              = icon('far', 'folder', class: "file-icon")
+              .content__product-name
+                型番：aa-0123-8888
+              .content__company
+                Panasonic
+          %label
+            = link_to "#", class: "content" do
+              = icon('far', 'folder', class: "file-icon")
+              .content__product-name
+                型番：aa-0123-8888
+              .content__company
+                Panasonic

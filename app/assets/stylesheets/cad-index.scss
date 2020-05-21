@@ -1,0 +1,136 @@
+.index {
+  width: 100vw;
+  color: #555;
+  .header {
+    height: 290px;
+    width: 100%;
+    background-color: #fff;
+    .title {
+      position: relative;
+      height: 210px;
+      text-align: center;
+      line-height: 210px;
+      font-size: 30px;
+      background-image: url(header.jpeg);
+      background-size: cover;
+      &__text {
+        background: rgba(255,255,255,0.7);
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;/*線の上下位置*/
+        display: inline-block;
+        width: 90%;/*線の長さ*/
+        height: 1px;/*線の太さ*/
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);/*位置調整*/
+        background-color: #555;/*線の色*/
+      }
+    }
+    ul {
+      width: 50%;
+      margin: 0 auto;
+      line-height: 80px;
+      display: flex;
+      justify-content: space-around;
+      li {
+        list-style: none;
+        font-size: 14px;
+        a {
+          text-decoration: none;
+          color: #555;
+          @include mouse_hover(0.5);
+        }
+      }
+    }
+  }
+  .main {
+    background-color: #f7cc7e;
+    padding: 10px 0;
+    .box {
+      width: 90%;
+      padding: 30px 50px;
+      margin: 0 auto;
+      background-color: #fff;
+      .information {
+        margin-bottom: 40px;
+        &__title {
+          p {
+            font-size: 25px;
+            margin-bottom: 20px;
+          }
+        }
+        &__contents {
+          padding: 0 20px;
+          li {
+            display: block;
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            border: 1px solid #999;
+            padding: 0 20px;
+            margin: 0 0 -1px 0;
+          }
+        }
+      }
+      .new-product {
+        &__title {
+          height: 45px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          p {
+            font-size: 25px;
+          }
+          .product-all {
+            margin: 0 0 0 auto;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #555;
+            font-size: 15px;
+            background-color: rgb(255, 166, 34);
+            border: 1px solid rgb(255, 166, 34);
+            @include mouse_hover(0.9);
+          }
+        }
+        &__contents {
+          padding: 0 20px;
+          label {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #999;
+            border-bottom: 1px solid #999;
+            margin: 0 0 -1px 0;
+            padding: 0 20px;
+            .content {
+              height: 40px;
+              width: 100%;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              color: #555;
+              @include mouse_hover(0.7);
+              .file-icon {
+                font-size: 2.5em;
+              }
+              &__product-name {
+                height: 20px;
+                font-size: 18px;
+                padding-left: 20px;
+              }
+              &__company {
+                height: 20px;
+                font-size: 18px;
+                margin: 0 0 0 auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
