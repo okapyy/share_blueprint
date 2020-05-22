@@ -8,13 +8,28 @@
     .title {
       position: relative;
       height: 210px;
+      line-height: 120px;
       text-align: center;
-      line-height: 210px;
       font-size: 30px;
       background-image: url(header.jpeg);
       background-size: cover;
       &__text {
+        padding-top: 40px;
         background: rgba(255,255,255,0.7);
+        &__devise {
+          font-size: 13px;
+          text-align: right;
+          margin-top: -40px;
+          margin-right: 80px;
+          .registration {
+            @include header-btn(#f7cc7e, #f7cc7e);
+            @include mouse_hover(0.7);
+          }
+          .session {
+            @include header-btn(#fff, #f7cc7e);
+            @include mouse_hover(0.7);
+          }
+        }
       }
       &:before {
         content: '';

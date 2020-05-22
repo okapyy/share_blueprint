@@ -3,3 +3,23 @@
     opacity: $opacity;
   }
 }
+
+@mixin devise-btn() {
+  width: 100%;
+  display: block;
+  height: 40px;
+  border: 1px solid #999;
+  font-size: 14px;
+  margin: 10px 0 20px;
+  cursor: pointer;
+}
+
+@mixin header-btn($background, $border) {
+  text-decoration: none;
+  background-color: $background;
+  border: 1px solid $border;
+  color: #555;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}

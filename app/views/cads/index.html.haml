@@ -3,6 +3,19 @@
     .title
       .title__text
         %p SHARE BLUEPRINT
+        .title__text__devise
+          - if user_signed_in?
+            = link_to "#", class: "registration" do
+              商品登録
+            = link_to "#", class: "session" do
+              マイページ
+            = link_to destroy_user_session_path, method: :delete, class: "registration" do
+              ログアウト
+          - else
+            = link_to new_user_registration_path, class: "registration" do
+              新規登録
+            = link_to new_user_session_path, class: "session" do
+              ログイン
     %ul
       %li
         = link_to "#" do
@@ -13,12 +26,6 @@
       %li
         = link_to "#" do
           ジャンル検索
-      %li
-        = link_to new_user_registration_path do
-          新規登録
-      %li
-        = link_to new_user_session_path do
-          ログイン
   .main
     .box
       .information
