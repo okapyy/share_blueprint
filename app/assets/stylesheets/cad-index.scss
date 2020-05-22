@@ -16,6 +16,10 @@
       &__text {
         padding-top: 40px;
         background: rgba(255,255,255,0.7);
+        a {
+          text-decoration: none;
+          color: #555;
+        }
         &__devise {
           font-size: 13px;
           text-align: right;
@@ -144,6 +148,18 @@
               }
             }
           }
+        }
+      }
+      .text-box {
+        &__title {
+          font-size: 24px;
+          margin-bottom: 15px;
+          border-bottom: 1px solid #555;
+        }
+        &__content {
+          font-size: 14px;
+          line-height: 30px;
+          margin-bottom: 40px;
         }
       }
     }

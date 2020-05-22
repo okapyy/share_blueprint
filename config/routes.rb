@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   root 'cads#index'
   resources :cads
+  get 'app', to: 'cads#app'
 end
