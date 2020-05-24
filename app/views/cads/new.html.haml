@@ -1,0 +1,23 @@
+.new
+  .form-box
+    .form
+      %p 製品登録
+      = form_for @cad do |f|
+        .fields
+          .field
+            = f.label "図面ファイル"
+            %span.require 必須
+            = f.file_field :design, class: 'input-file'
+          .field
+            = f.label "メーカー名"
+            %span.require 必須
+            = f.text_field :company, class: 'input'
+          .field
+            = f.label "製品名・型番・品番"
+            %span.require 必須
+            = f.text_field :product_name, class: 'input'
+          .field
+            = f.label "製品詳細"
+            %span.unrequire 任意
+            = f.text_area :detail, class: 'input-area'
+          = f.submit "登録する", class: "action"

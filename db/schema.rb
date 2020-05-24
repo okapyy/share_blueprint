@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_054501) do
     t.string "company", null: false
     t.string "product_name", null: false
     t.text "detail"
-    t.integer "user", null: false
-    t.integer "genre", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

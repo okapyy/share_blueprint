@@ -1,3 +1,77 @@
-// Place all the styles related to the cads controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.new {
+  width: 100vw;
+  height: 100vh;
+  color: #555;
+  background-image: url(mado.jpg);
+  background-size: cover;
+  .form-box {
+    width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    background: rgba(255,255,255,0.8);
+    .form {
+      padding: 50px 90px;
+      p {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #555;
+      }
+      .fields {
+        margin-top: 50px;
+        .field {
+          margin-bottom: 20px;
+          label {
+            font-size: 14px;
+          }
+          span.require{
+            font-size: 11px;
+            border: 1px solid #f7cc7e;
+            background-color: #f7cc7e;
+            border-radius: 5px;
+            padding: 2px;
+            margin: 0 0 5px 4px;
+          }
+          span.unrequire {
+            font-size: 11px;
+            border: 1px solid #f7cc7e;
+            border-radius: 5px;
+            padding: 2px;
+            margin: 0 0 5px 4px;
+          }
+          .input-file {
+            width: 100%;
+            height: 30px;
+            margin-top: 14px;
+            margin-bottom: -18px;
+          }
+          .input {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #777;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin-top: 5px;
+          }
+          .input-area {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #777;
+            border-radius: 5px;
+            padding: 10px 10px;
+            margin-top: 5px;
+          }
+        }
+        .action {
+          display: block;
+          margin: 0 auto;
+          font-size: 15px;
+          width: 300px;
+          height: 60px;
+          border: 1px solid #777;
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@
         %p SHARE BLUEPRINT
       .title__text__devise
         - if user_signed_in?
-          = link_to "#", class: "registration" do
+          = link_to new_cad_path, class: "registration" do
             商品登録
           = link_to "#", class: "session" do
             マイページ
@@ -22,7 +22,7 @@
         アプリについて
     %li
       = link_to "#" do
-        登録メーカー一覧
+        登録製品一覧
     %li
       = link_to "#" do
         ジャンル検索

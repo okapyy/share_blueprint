@@ -17,24 +17,11 @@
           = link_to "#", class: "product-all" do
             新着製品一覧
         .new-product__contents
-          %label
-            = link_to "#", class: "content" do
-              = icon('far', 'folder', class: "file-icon")
-              .content__product-name
-                型番：aa-0123-8888
-              .content__company
-                Panasonic
-          %label
-            = link_to "#", class: "content" do
-              = icon('far', 'folder', class: "file-icon")
-              .content__product-name
-                型番：aa-0123-8888
-              .content__company
-                Panasonic
-          %label
-            = link_to "#", class: "content" do
-              = icon('far', 'folder', class: "file-icon")
-              .content__product-name
-                型番：aa-0123-8888
-              .content__company
-                Panasonic
+          - @cads.each do |cad|
+            %label
+              = link_to "#", class: "content" do
+                = icon('far', 'folder', class: "file-icon")
+                .content__product-name
+                  = cad.product_name
+                .content__company
+                  = cad.company
