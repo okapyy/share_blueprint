@@ -4,8 +4,7 @@
       .design__thumb
         = @cad.design
       .design__download
-        = link_to 'ダウンロードする', download_design_path(@cad), method: :get, class: "download-btn"
-        -# = link_to 'ダウンロードする', download_design_path(@cad), method: :get, class: "download-btn"
+        = link_to 'ダウンロードする', download_design_path(@cad), method: :get
     .field
       .field__name
         %p 製品名・品番

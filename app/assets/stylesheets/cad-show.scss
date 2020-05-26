@@ -15,17 +15,20 @@
       }
       &__download {
         margin-left: 30px;
+        width: 130px;
         position: relative;
-        input {
+        a {
           position: absolute;
           bottom: 0;
+          text-decoration: none;
           padding: 5px 10px;
           border: 1px solid #ee9b00;
           border-radius: 13px;
           background-color: #ee9b00;
-          cursor: pointer;
           transition: all 0.3s ease 0s;
-          @include mouse_hover(0.8);
+          color: #555;
+          font-size: 13px;
+          @include mouse_hover(0.9);
         }
       }
     }
