@@ -66,5 +66,6 @@ gem 'devise'
 gem 'font-awesome-sass'
 
 gem 'carrierwave'
+gem 'streamio-ffmpeg'
 
 gem 'ancestry'

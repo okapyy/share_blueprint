@@ -29,13 +29,32 @@ class DesignUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :thumb do
-    process resize_to_fit: [100, 100]
-  end
+  # version :screenshot do
+  #   process :screenshot
+  #   def full_filename (for_file = model.logo.file)
+  #     "screenshot.jpg"
+  #   end
+  # end
 
-  version :content do
-    process resize_to_limit: [640, 640]
-  end
+  # def screenshot
+  #   tmpfile = File.join(File.dirname(current_path), "tmpfile")
+
+  #   File.rename(current_path, tmpfile)
+
+  #   cad = FFMPEG::Cad.new(tmpfile)
+  #   cad.screenshot(current_path + ".jpg", {resolution: '512x312' }, preserve_aspect_ratio: :width)
+  #   File.rename(current_path + ".jpg", current_path)
+
+  #   File.delete(tmpfile)
+  # end
+
+  # version :thumb do
+  #   process resize_to_fit: [100, 100]
+  # end
+
+  # version :content do
+  #   process resize_to_limit: [640, 640]
+  # end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

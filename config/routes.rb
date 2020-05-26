@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'cads#index'
+
+  get 'cads/download/:id', to: 'cads#download', as: 'download_design'
   resources :cads
+
   get 'app', to: 'cads#app'
-  get 'download', to: 'cads#download'
+  
 end

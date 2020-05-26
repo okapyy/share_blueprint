@@ -26,11 +26,15 @@ class CadsController < ApplicationController
   end
 
   def update
+    cad = Cad.find(params[:id])
+    cad.update(cad_params)
+    redirect_to cad
   end
 
   def destroy
     cad = Cad.find(params[:id])
     cad.destroy
+    redirect_to root_path
   end
 
   def app
@@ -38,9 +42,7 @@ class CadsController < ApplicationController
 
   def download
     cad = Cad.find(params[:id])
-    filepath = Rails.root.join('public', cad.design)
-    stat = File::stat(filepath)
-    send_file(filepath, design: cad.design, length: stat.size)
+    send_data(cad.design.read, filename: cad.product_name)
   end
 
   private
