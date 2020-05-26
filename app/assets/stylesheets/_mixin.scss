@@ -12,6 +12,7 @@
   font-size: 14px;
   margin: 10px 0 20px;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
 @mixin header-btn($background, $border) {
@@ -22,4 +23,16 @@
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 20px;
+  transition: all 0.3s ease 0s;
+}
+
+@mixin circle-btn($bg-color,$color) {
+  text-decoration: none;
+  padding: 7px 13px;
+  border: 1px solid #f7cc7e;
+  border-radius: 13.5px;
+  background-color: $bg-color;
+  font-size: 13px;
+  color: $color;
+  transition: all 0.3s ease 0s;
 }

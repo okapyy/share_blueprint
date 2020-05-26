@@ -9,11 +9,38 @@ class CadsController < ApplicationController
 
   def create
     @cad = Cad.new(cad_params)
-    @cad.save!
+    @cad.save
     redirect_to root_path
   end
 
+  def show
+    if user_signed_in?
+      @cad = Cad.find(params[:id])
+    else
+      redirect_to new_user_registration_path
+    end
+  end
+
+  def edit
+    @cad = Cad.find(params[:id])
+  end
+
+  def update
+  end
+
+  def destroy
+    cad = Cad.find(params[:id])
+    cad.destroy
+  end
+
   def app
+  end
+
+  def download
+    cad = Cad.find(params[:id])
+    filepath = Rails.root.join('public', cad.design)
+    stat = File::stat(filepath)
+    send_file(filepath, design: cad.design, length: stat.size)
   end
 
   private

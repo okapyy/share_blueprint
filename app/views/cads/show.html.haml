@@ -1,0 +1,32 @@
+.cads-show
+  .show-box
+    .design
+      .design__thumb
+      .design__download
+        = button_to 'ダウンロードする', method: :get, class: "download-btn"
+    .field
+      .field__name
+        %p 製品名・品番
+      .field__box
+        SAMOS-H RF 引違い窓
+    .field
+      .field__name
+        %p メーカー名
+      .field__box
+        LIXIL
+    .field
+      .field__name
+        %p 製品詳細
+      .field__box
+        2枚建 / ガラス溝幅25mm(ガラス総厚22mm)
+    .row-btn
+      .row-btn__container
+        - if @cad.user_id == current_user.id
+          = link_to edit_cad_path(@cad.id), class: "row-btn__container__edit" do
+            編集する
+          = link_to cad_path(@cad.id), method: :delete, class: "row-btn__container__destroy" do
+            削除する
+    .back-btn
+      = link_to "#", class: "back-btn__text" do
+        = icon('fas', 'arrow-left')
+        製品一覧にもどる

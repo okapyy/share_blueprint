@@ -1,0 +1,75 @@
+.cads-show {
+  width: 100vw;
+  height: 100vh;
+  .show-box {
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 60px;
+    .design {
+      display: flex;
+      margin-left: 192px;
+      &__thumb {
+        width: 200px;
+        height: 150px;
+        background-color: rgb(255, 230, 88);
+      }
+      &__download {
+        margin-left: 30px;
+        position: relative;
+        input {
+          position: absolute;
+          bottom: 0;
+          padding: 5px 10px;
+          border: 1px solid #ee9b00;
+          border-radius: 13px;
+          background-color: #ee9b00;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          @include mouse_hover(0.8);
+        }
+      }
+    }
+    .field {
+      padding: 28px 10px 0;
+      &__name {
+        p {
+          font-size: 13px;
+          color: #555;
+          padding: 7px 5px;
+          border-bottom: 1px solid #888;
+        }
+      }
+      &__box {
+        padding: 18px 9px 0;
+      }
+    }
+    .row-btn {
+      display: flex;
+      padding: 40px 10px 20px;
+      &__container {
+        margin: 0 0 0 auto;
+        &__edit {
+          @include circle-btn(#f7cc7e, #fff);
+          @include mouse_hover(0.6)
+        }
+        &__destroy {
+          margin-left: 10px;
+          @include circle-btn(#fff, #555);
+          @include mouse_hover(0.6)
+        }
+      }
+    }
+    .back-btn {
+      &__text {
+        text-decoration: none;
+        color: #555;
+        margin-left: 10px;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          text-decoration: underline;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
