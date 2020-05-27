@@ -7,9 +7,7 @@
         - if user_signed_in?
           = link_to new_cad_path, class: "registration" do
             商品登録
-          = link_to "#", class: "session" do
-            マイページ
-          = link_to destroy_user_session_path, method: :delete, class: "registration" do
+          = link_to destroy_user_session_path, method: :delete, class: "session" do
             ログアウト
         - else
           = link_to new_user_registration_path, class: "registration" do

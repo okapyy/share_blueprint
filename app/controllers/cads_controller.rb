@@ -9,7 +9,7 @@ class CadsController < ApplicationController
 
   def create
     @cad = Cad.new(cad_params)
-    @cad.save
+    @cad.save!
     redirect_to root_path
   end
 
@@ -46,11 +46,11 @@ class CadsController < ApplicationController
 
   def download
     cad = Cad.find(params[:id])
-    send_data(cad.design.read, filename: "#{cad.product_name}.dwg")
+    send_data(cad.design.read, filename: cad.product_name)
   end
 
   private
   def cad_params
-    params.require(:cad).permit(:design, :company, :product_name, :detail).merge(user_id: current_user.id)
+    params.require(:cad).permit(:design, :thumbnail, :company, :product_name, :detail).merge(user_id: current_user.id)
   end
 end

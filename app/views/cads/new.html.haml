@@ -9,6 +9,13 @@
             %span.require 必須
             = f.file_field :design, class: 'input-file'
           .field
+            = f.label "サムネイル"
+            %span.unrequire 任意
+            -# %label
+            -#   = icon('fas', 'camera-retro', class: 'thumb-icon')
+            = f.file_field :thumbnail, class: 'input-file'
+            -# #thumb-box
+          .field
             = f.label "メーカー名"
             %span.require 必須
             = f.text_field :company, class: 'input'

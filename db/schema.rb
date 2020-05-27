@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_054501) do
 
   create_table "cads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "design", null: false
+    t.string "thumbnail"
     t.string "company", null: false
     t.string "product_name", null: false
     t.text "detail"

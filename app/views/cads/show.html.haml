@@ -2,7 +2,7 @@
   .show-box
     .design
       .design__thumb
-        = @cad.design
+        = image_tag @cad.thumbnail.thumb.to_s
       .design__download
         = link_to 'ダウンロードする', download_design_path(@cad), method: :get
     .field

@@ -1,6 +1,5 @@
 .new {
   width: 100vw;
-  height: 100vh;
   color: #555;
   background-image: url(mado.jpg);
   background-size: cover;
@@ -45,6 +44,12 @@
             height: 30px;
             margin-top: 14px;
             margin-bottom: -18px;
+          }
+          .thumb-icon {
+            display: block;
+            margin-top: 5px;
+            font-size: 26px;
+            cursor: pointer;
           }
           .input {
             width: 100%;
