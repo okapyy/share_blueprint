@@ -1,0 +1,18 @@
+.index
+  = render 'header'
+  .main
+    .box
+      .new-product
+        .new-product__title
+          %p ALL PRODUCTION.
+        .new-product__contents
+          - @cads.each do |cad|
+            %label
+              = link_to cad_path(cad.id), class: "content" do
+                = icon('far', 'folder', class: "file-icon")
+                .content__product-name
+                  = cad.product_name
+                .content__company
+                  = cad.company
+        .page
+          = paginate @cads

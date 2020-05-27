@@ -105,17 +105,6 @@
           p {
             font-size: 25px;
           }
-          .product-all {
-            margin: 0 0 0 auto;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #555;
-            font-size: 15px;
-            background-color: rgb(255, 166, 34);
-            border: 1px solid rgb(255, 166, 34);
-            transition: all 0.3s ease 0s;
-            @include mouse_hover(0.9);
-          }
         }
         &__contents {
           padding: 0 20px;

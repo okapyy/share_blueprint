@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :cads
 
   get 'app', to: 'cads#app'
+  get 'all', to: 'cads#all'
   
 end

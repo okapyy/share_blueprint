@@ -40,9 +40,13 @@ class CadsController < ApplicationController
   def app
   end
 
+  def all
+    @cads = Cad.includes(:user).order("created_at DESC").page(params[:page]).per(12)
+  end
+
   def download
     cad = Cad.find(params[:id])
-    send_data(cad.design.read, filename: cad.product_name)
+    send_data(cad.design.read, filename: "#{cad.product_name}.dwg")
   end
 
   private
