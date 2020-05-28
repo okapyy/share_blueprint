@@ -49,6 +49,10 @@ class CadsController < ApplicationController
     send_data(cad.design.read, filename: cad.product_name)
   end
 
+  def search
+    @cads = Cad.search(params[:keyword])
+  end
+
   private
   def cad_params
     params.require(:cad).permit(:design, :thumbnail, :company, :product_name, :detail).merge(user_id: current_user.id)

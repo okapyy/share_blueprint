@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'cads#index'
 
   get 'cads/download/:id', to: 'cads#download', as: 'download_design'
+  namespace :cads do
+    resources :searches, only: [:index]
+  end
   resources :cads
 
   get 'app', to: 'cads#app'
